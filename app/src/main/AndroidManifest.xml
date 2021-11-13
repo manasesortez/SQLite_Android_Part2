@@ -12,9 +12,12 @@
         android:theme="@style/bitcoinTwo"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".modificar_contacto"
+            android:exported="false" />
+        <activity
             android:name=".Add_Contact"
             android:exported="false"
-            android:theme="@style/bitcoinTwo"  />
+            android:theme="@style/bitcoinTwo" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import com.amtodev.bitcoinconvert.Clases.ConexionSQLite;
 import com.amtodev.bitcoinconvert.Clases.Configuraciones;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Contact extends AppCompatActivity {
 
@@ -29,6 +31,7 @@ public class Contact extends AppCompatActivity {
     Configuraciones objConfiguracion;
     ArrayList<String> lista;
     ArrayAdapter adaptador;
+    List<Integer> arregloID = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,15 @@ public class Contact extends AppCompatActivity {
 
         cajaBusquedaNombre = findViewById(R.id.txtCriterio);
         listaContactos = (ListView) findViewById(R.id.lvContactos);
+        listaContactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int idSeleccionado = arregloID.get(position);
+                Intent ventanaModificar = new Intent(Contact.this, modificar_contacto.class);
+                ventanaModificar.putExtra("id_contacto", idSeleccionado);
+                startActivity(ventanaModificar);
+            }
+        });
 
         botonBuscar = findViewById(R.id.btnBuscar);
         botonBuscar.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +69,7 @@ public class Contact extends AppCompatActivity {
                 startActivity(ventana);
             }
         });
+
 
     }
 
@@ -77,9 +90,12 @@ public class Contact extends AppCompatActivity {
         SQLiteDatabase base = objConexion.getReadableDatabase();
         String consulta = "select id_contacto,nombre,telefono from contactos WHERE nombre LIKE '%"+ cajaBusquedaNombre.getText().toString() +"%' OR telefono LIKE '%"+ cajaBusquedaNombre.getText().toString() +"%' " + " order by nombre ASC";
         @SuppressLint("Recycle") Cursor cadaRegistro = base.rawQuery(consulta, null);
+
+        arregloID.clear();
         if(cadaRegistro.moveToFirst()){
             do{
                 miLista.add(cadaRegistro.getString(1).toString()+ " - "+cadaRegistro.getString(2).toString());
+                arregloID.add(cadaRegistro.getInt(0));
             }while(cadaRegistro.moveToNext());
         }
         base.close();
