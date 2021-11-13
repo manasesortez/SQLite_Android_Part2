@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="0px"
-        android:layout_marginBottom="400dp"
+        android:layout_marginBottom="500dp"
         android:layout_weight="3"
         android:background="@drawable/card_background"
         android:elevation="36dp"
@@ -106,14 +106,15 @@
                 android:layout_below="@+id/listaConversion"
                 android:background="@drawable/button"
                 android:text="Eliminar"
+                android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="40px"
-                android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.765"
+                app:layout_constraintVertical_bias="0.668"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -123,14 +124,15 @@
                 android:layout_below="@+id/listaConversion"
                 android:background="@drawable/button"
                 android:text="Modificar"
+                android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="40px"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.068"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textAllCaps="false"
-                app:layout_constraintVertical_bias="0.588"
+                app:layout_constraintVertical_bias="0.665"
                 tools:ignore="HardcodedText,UnknownId,UnknownIdInLayout" />
 
             <Button
@@ -140,14 +142,33 @@
                 android:layout_below="@+id/listaConversion"
                 android:background="@drawable/button"
                 android:text="Regresar"
-                android:textColor="#fff"
                 android:textAllCaps="false"
+                android:textColor="#fff"
                 android:textSize="40px"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.936"
+                app:layout_constraintVertical_bias="0.876"
+                tools:ignore="HardcodedText,UnknownId,UnknownIdInLayout" />
+
+            <Button
+                android:id="@+id/btnllamar"
+                android:layout_width="179dp"
+                android:layout_height="46dp"
+                android:layout_below="@+id/listaConversion"
+                android:background="@drawable/button"
+                android:text="llamar"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="40px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.068"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.876"
                 tools:ignore="HardcodedText,UnknownId,UnknownIdInLayout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
