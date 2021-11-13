@@ -24,7 +24,7 @@ public class Contact extends AppCompatActivity {
     ConexionSQLite objConexion;
     final String NOMBRE_BASE_DATOS = "miagenda";
     Button botonAgregar, botonBuscar;
-    EditText cajaBusquedaNombre, cajaBusquedaTelefono;
+    EditText cajaBusquedaNombre;
     ListView listaContactos;
     Configuraciones objConfiguracion;
     ArrayList<String> lista;
@@ -39,7 +39,6 @@ public class Contact extends AppCompatActivity {
         objConexion = new ConexionSQLite(Contact.this, objConfiguracion.BD, null, 1);
 
         cajaBusquedaNombre = findViewById(R.id.txtCriterio);
-        cajaBusquedaTelefono = findViewById(R.id.txtCriterioNumero);
         listaContactos = (ListView) findViewById(R.id.lvContactos);
 
         botonBuscar = findViewById(R.id.btnBuscar);
@@ -76,11 +75,11 @@ public class Contact extends AppCompatActivity {
     public ArrayList llenarLista(){
         ArrayList<String> miLista = new ArrayList<String>();
         SQLiteDatabase base = objConexion.getReadableDatabase();
-        String consulta = "select id_contacto,nombre,telefono from contactos WHERE nombre LIKE '%"+ cajaBusquedaNombre.getText().toString() +"%' OR telefono LIKE '%"+ cajaBusquedaTelefono.getText().toString() +"%' " + " order by nombre ASC";
+        String consulta = "select id_contacto,nombre,telefono from contactos WHERE nombre LIKE '%"+ cajaBusquedaNombre.getText().toString() +"%' OR telefono LIKE '%"+ cajaBusquedaNombre.getText().toString() +"%' " + " order by nombre ASC";
         @SuppressLint("Recycle") Cursor cadaRegistro = base.rawQuery(consulta, null);
         if(cadaRegistro.moveToFirst()){
             do{
-                miLista.add(cadaRegistro.getString(1).toString()+ "-"+cadaRegistro.getString(2).toString());
+                miLista.add(cadaRegistro.getString(1).toString()+ " - "+cadaRegistro.getString(2).toString());
             }while(cadaRegistro.moveToNext());
         }
         base.close();

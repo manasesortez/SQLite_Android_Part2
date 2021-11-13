@@ -11,7 +11,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.11889250814332247" />
         <entry key="app/src/main/res/drawable/ic_launcher_bitcoin_foreground.xml" value="0.11889250814332247" />
         <entry key="app/src/main/res/drawable/ic_money.xml" value="0.11875" />
-        <entry key="app/src/main/res/layout/activity_add_contact.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_add_contact.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_bitcoin_convert.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_contact.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />

@@ -9,9 +9,9 @@
 
     <ListView
         android:id="@+id/lvContactos"
-        android:layout_width="411dp"
-        android:layout_height="526dp"
-        android:layout_marginTop="328dp"
+        android:layout_width="406dp"
+        android:layout_height="569dp"
+        android:layout_marginTop="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,6 +65,7 @@
                 app:layout_constraintVertical_bias="0.061"
                 tools:ignore="HardcodedText,SpUsage" />
 
+
             <EditText
                 android:id="@+id/txtCriterio"
                 android:layout_width="353dp"
@@ -74,7 +75,7 @@
                 android:drawablePadding="8dp"
                 android:ems="10"
                 android:fontFamily="@font/seguisb"
-                android:hint="Buscar por Nombre"
+                android:hint="Buscar por Nombre ó Telefono"
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textColor="#283241"
@@ -84,28 +85,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.289"
-                tools:ignore="Autofill,HardcodedText,LabelFor,RtlCompat,RtlHardcoded,RtlSymmetry,SpUsage,UnknownIdInLayout" />
-
-            <EditText
-                android:id="@+id/txtCriterioNumero"
-                android:layout_width="353dp"
-                android:layout_height="43dp"
-                android:layout_below="@+id/textView"
-                android:background="@drawable/edit_text_background"
-                android:drawablePadding="8dp"
-                android:ems="10"
-                android:fontFamily="@font/seguisb"
-                android:hint="Buscar por Telefono"
-                android:inputType="phone"
-                android:paddingLeft="15dp"
-                android:textColor="#283241"
-                android:textColorHint="#495057"
-                android:textSize="17dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.343"
                 tools:ignore="Autofill,HardcodedText,LabelFor,RtlCompat,RtlHardcoded,RtlSymmetry,SpUsage,UnknownIdInLayout" />
 
             <Button
@@ -122,7 +102,7 @@
                 app:layout_constraintHorizontal_bias="0.931"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.831"
+                app:layout_constraintVertical_bias="0.723"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -139,7 +119,7 @@
                 app:layout_constraintHorizontal_bias="0.125"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.831"
+                app:layout_constraintVertical_bias="0.723"
                 tools:ignore="HardcodedText,UnknownId,UnknownIdInLayout" />
 
 
